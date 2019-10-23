@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Pet Site</title>
+</head>
+<body>
+    <div id="app">
+        <app-header :h_data="header_data"></app-header>
+        <app-nav></app-nav>
+        <!-- router view here -->
+        <main>
+            <div class="wrapper">
+                <router-view></router-view>
+            </div>
+        </main>
+        <app-blog v-if="$route.name=='home'"></app-blog>
+        <app-bottom></app-bottom>
+        <app-footer :datas="footer_data"></app-footer>
+        <!-- <app-footer></app-footer> -->
+    </div>
+    <script src="js/vue.js"></script>
+    <script src="js/vue_router.js"></script>
+    <script src="js/mydata.js"></script>
+    <script src="js/component.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>    
